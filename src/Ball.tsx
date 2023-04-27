@@ -7,7 +7,7 @@ import {
 
 import Animated, { AnimateStyle,} from 'react-native-reanimated'
 
-const Ball2: React.FC<{
+const Ball: React.FC<{
   animatedStyles: AnimateStyle<ViewStyle>
   color: ColorValue
   y: number
@@ -26,4 +26,4 @@ const Ball2: React.FC<{
   }, animatedStyles]} />
 )
 
-export default Ball2
+export default Ball
