@@ -9,13 +9,16 @@ So far I haven't been able to recreate it.
 
 You must have the Java 11, the Android SDK, and Android Studio, installed.
 
-Instructions are [here](https://reactnative.dev/docs/environment-setup)
+Instructions are [here](https://reactnative.dev/docs/environment-setup). Follow the React Native CLI path for the Android target on your platform (not Expo)
 
-Android Studio is mostly needed to create an emulator profile and run the emulator. [Like so](https://developer.android.com/studio/run/managing-avds)
+Android Studio is mostly needed to [create an emulator profile and run the emulator.](https://developer.android.com/studio/run/managing-avds)
+
+(On Linux, the SDK seems to want to go in my home dir, and that's fine. I put Android Studio in `/opt` which works fine, but you have to manually create an app launcher )
 
 
-## Repo scripts
+## scripts
 
+### first,
 ### `yarn install`
 
 then, any of
