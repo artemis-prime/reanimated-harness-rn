@@ -32,15 +32,6 @@ const Layout: React.FC = () => {
     // Animated styles are interpolated as needed.
   const animationBase = useSharedValue<number>(onLeftSV.value ? 0 : 1) 
 
-  const animationStyles = useAnimatedStyle(() => ({
-    left: interpolate(
-      animationBase.value, 
-      [0, 1], 
-      [20, 200], 
-      { extrapolateRight: Extrapolation.CLAMP }
-    )
-  }))
-
   const preAnimation = () => {
     if (onLeftSV.value) {
       setOnLeftReally(false)   
@@ -61,13 +52,22 @@ const Layout: React.FC = () => {
       onLeftSV.value ? 1 : 0, 
       {
         duration: 500,
-        easing: animationBase.value > 0 ? Easing.out(Easing.exp) : Easing.in(Easing.exp),
+        easing: Easing.out(Easing.exp),
       },
       () => {
         runOnJS(postAnimation)(!onLeftSV.value)
       }
     )
   }
+
+  const animationStyles = useAnimatedStyle(() => ({
+    left: interpolate(
+      animationBase.value, 
+      [0, 1], 
+      [20, 200], 
+      { extrapolateRight: Extrapolation.CLAMP }
+    )
+  }))
 
   return (
     <SafeAreaView style={{

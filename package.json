@@ -25,9 +25,10 @@
     "@babel/plugin-transform-template-literals": "^7.18.9",
     "@babel/preset-env": "^7.20.0",
     "@babel/runtime": "^7.20.0",
+    "@react-native/metro-config": "^0.73.0",
     "@tsconfig/react-native": "^2.0.2",
     "@types/react": "^18.0.24",
-    "@types/react-test-renderer": "^18.2.0",
+    "@types/react-test-renderer": "^18.0.0",
     "metro-react-native-babel-preset": "0.73.9",
     "react-native-gradle-plugin": "^0.71.17",
     "typescript": "5.0.4"
