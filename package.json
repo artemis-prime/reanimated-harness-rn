@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "android": "react-native run-android",
+    "deploy": "react-native run-android --mode release",
     "start": "react-native start",
     "clean": "rm -rf node_modules",
     "tcheck": "tsc"
